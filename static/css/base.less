@@ -1,0 +1,92 @@
+@import "vars";
+@import "_lesshat";
+@import "re-layui";
+body{overflow-y:scroll;color:@baseFontColor;}
+.admin-container {
+    .layui-nav {
+        background-color: @baseColor; border-radius: 0;
+        //background-image: linear-gradient(143deg,#2945cb 20%,#2b83f9 81%,#3a9dff);
+        background:darken(@baseColor,10%); background: linear-gradient(135deg,  darken(@baseColor,10%) 0%, @baseColor 100%);
+    }
+
+    .layui-logo {
+        color: #FFF;
+        font-weight: bold;
+        left: 0;
+    }
+}
+
+.admin-menu{ position:absolute;top:0;bottom:0;left:0; width:250px; .opacityBg-ie(#FFF,.1); border-right:1px solid rgba(0,0,0,.1); z-index: 9;    box-shadow: 1px 0 2px 0 rgba(0,0,0,.05);
+    .admin-logo{ line-height: 60px; font-size:24px; text-align: center; color:#FFF;}
+}
+
+.admin-menu-tab{position:absolute;top:60px; bottom:0; width: 100%; margin:0;overflow:hidden;
+    .layui-tab-title{position:absolute;height:100%;  width: 60px;left:0; top:0; background: @baseColor;
+        li{display: block; padding: 15px 0; border:none !important; min-width: 0; color:@baseText; text-align: center; line-height: 1;
+            .iconfont{ display: block; margin-bottom: 10px; font-size:18px;}
+        }
+        li.layui-this{background: #FFF; color:@baseColor;}
+        .layui-this:after{ display: none;}
+    }
+    .layui-tab-content{position:absolute;left:60px; right:0;bottom:0;top:0;overflow:auto;}
+    .layui-tab-bar{ display: none;}
+}
+.admin-sub-menu{padding-left:10px; margin-bottom: 10px;
+    dt{ padding-bottom: 5px;}
+    dd{padding-left:10px;
+        a{ display: block; color:#999; line-height: 1.8;}
+        a:hover,a.layui-this{ color:@baseColor;}
+    }
+}
+.admin-body{ position: absolute; right:0;left:250px; top:60px; bottom:0; background: @baseBackground;}
+
+.admin-tag{ background:#FFF; border-bottom:@baseBorderColor; padding-top: 10px; border-top-left-radius: 5px; border-top-right-radius: 5px;
+    .layui-tab{ margin: 0;}
+    .layui-this{ background:@baseBackground ;
+        &:after{  border:none;}
+
+    }
+.layui-tab-title{
+    padding-left: 15px;
+    li{ border:1px solid @baseBorderColor; border-bottom:none;margin-left:-1px; width:12.5%;padding-right:22px;overflow:hidden; min-width: 0; white-space: normal; height:40px; box-sizing: border-box;
+        .layui-tab-close{ position:absolute; right:5px;top:10px;}
+    }
+    span.layui-tab-bar{ display: none;}
+}
+}
+
+.admin-content{position:absolute; right:0;left:0; bottom:0;top:50px; padding:0; box-sizing: border-box;}
+
+.admin-iframe-page{position:absolute; top:0; bottom:0;left:0; right:0; width: 100%;height:100%;}
+.admin-sub-heading{ height:50px; line-height: 50px; padding-left:20px; margin-bottom: 20px;}
+
+.admin-card-list{
+
+    .admin-card-item{  height:140px; display: block; text-align: center; background: #FFF; color:@baseColor;box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.15);
+    .layui-icon{ display: block; height:100px; line-height: 100px; font-size:40px;background:@baseColor;color:#FFF; }
+        p{ height:40px; line-height: 40px;}
+    }
+
+}
+
+.admin-windows{position:absolute; top:0; bottom:0;left:0; right:0; width: 100%;height:100%; background: url(../images/bg2.jpg) no-repeat;}
+.admin-windows-item{transition:all .2s;position:absolute; text-align: center; display: block;overflow: hidden; margin:15px 0 0 15px;width:100px; height:100px;
+    .admin-windows-icon{  display: block;border-radius: 8px; color:#FFF; text-align: center; line-height: 55px; font-size:35px; margin: 0 auto;overflow: hidden;
+    img{ max-width: 100%;}
+    }
+    .layui-icon{ background: @baseColor;}
+}
+.admin-window-name{ height:1em; overflow: hidden; line-height: 1;margin-top:10px; color:#FFF; font-size:12px; text-shadow: 1px 1px 1px #000;}
+
+.admin-windows-list{position:absolute; top:0; bottom:60px;left:0; right:0;}
+.admin-windows-toolbar{ .opacityBg-ie(#000,.5); position: absolute; bottom:0;left:0;right:0; height:50px; color:#FFF; line-height: 50px; padding:0 20px; border-top:1px solid rgba(0,0,0,.1);box-shadow: 0 -2px 3px rgba(0,0,0,.2);}
+.admin-windows-toolbar-item{  color:#FFF; padding:0 15px; border-right:1px solid rgba(0,0,0,.2);
+    &:hover{ color:#FFF;}
+}
+
+.admin-windows-group{padding:15px;
+    .group{position:relative; .opacityBg-ie(#000,.3); overflow: hidden; float:left;border-radius: 5px; margin: 10px;
+        .group-title{.opacityBg-ie(#000,.3); color:#FFF; text-align: center; height:35px; line-height: 35px; }
+    }
+    .admin-windows-item{ width: 100px;height:100px; position: static; float:left;}
+}

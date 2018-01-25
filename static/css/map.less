@@ -1,0 +1,175 @@
+﻿    .map-tree {
+        position: absolute;
+        left: 0;
+        width: 270px;
+        bottom: 0;
+        top: 60px;
+        overflow: auto;
+        border-right:1px solid #ddd;
+        box-sizing:border-box;
+    }
+
+    .map-map {
+        left: 270px;
+        position: absolute;
+        top: 60px;
+        bottom: 200px;
+        right: 0;
+    }
+
+    .map-data-list {
+        left: 270px !important;
+    }
+
+
+    #data-list {
+        position: absolute;
+        height: 200px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: #FFF;
+    }
+
+    .layui-table, .layui-table-view {
+        margin: 0;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+    /*#data-list tr:hover td {
+        background: #e9e9e9;
+    }
+
+    #data-list td, #data-list th {
+        padding: 0 15px;
+        border: 0px solid #000000;
+    }
+
+    #data-list th {
+        height: 35px;
+        line-height: 35px;
+        text-align: left;
+    }
+
+
+
+    #data-list td {
+        height: 35px;
+        line-height: 35px;
+        border-bottom: 1px solid #ddd;
+    }*/
+    .drag {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        background: none;
+        height: 7px;
+        cursor: n-resize;
+    }
+
+
+
+    /*fixed-head-table*/
+    .fht-thead {
+        background: #ddd;
+    }
+
+    .odd {
+        background: #f1f1f1;
+    }
+
+    .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Chrome/Safari/Opera */
+        -khtml-user-select: none; /* Konqueror */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently not supported by any browser */
+    }
+
+    .fht-table,
+    .fht-table thead,
+    .fht-table tfoot,
+    .fht-table tbody,
+    .fht-table tr,
+    .fht-table th,
+    .fht-table td {
+        /* position */
+        margin: 0;
+        /* size */
+        padding: 0;
+        /* text */
+        font-size: 100%;
+        font: inherit;
+        vertical-align: top;
+    }
+
+    .fht-table {
+        /* appearance */
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    /* @end */
+
+    /* @group Content */
+
+    .fht-table-wrapper,
+    .fht-table-wrapper .fht-thead,
+    .fht-table-wrapper .fht-tfoot,
+    .fht-table-wrapper .fht-fixed-column .fht-tbody,
+    .fht-table-wrapper .fht-fixed-body .fht-tbody,
+    .fht-table-wrapper .fht-tbody {
+        /* appearance */
+        overflow: hidden;
+        /* position */
+        position: relative;
+    }
+
+    .fht-table-wrapper .fht-fixed-body .fht-tbody,
+    .fht-table-wrapper .fht-tbody {
+        /* appearance */
+        overflow: auto;
+    }
+
+    .fht-table-wrapper .fht-table .fht-cell {
+        /* appearance */
+        overflow: hidden;
+        /* size */
+        height: 1px;
+    }
+
+    .fht-table-wrapper .fht-fixed-column,
+    .fht-table-wrapper .fht-fixed-body {
+        /* position */
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    .fht-table-wrapper .fht-fixed-column {
+        /* position */
+        z-index: 1;
+    }
+
+    .map-infowindow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+
+        div { 
+            color:#777;
+            padding: 3px 0;
+            border-bottom: 1px dotted #f3f3f3;
+            strong{ color:#333;}
+        }
+    }
+
+
+
+    /* @end */

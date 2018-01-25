@@ -1,0 +1,233 @@
+@import "vars";
+@input-height: 30px;
+
+.layui-input, .layui-textarea, .layui-select {
+    height: @input-height;
+    line-height: @input-height;
+}
+
+.layui-form-label {
+    padding: 5px 15px;
+}
+
+.layui-form .layui-text {
+    height: @input-height;
+    line-height: @input-height;
+}
+
+.layui-form .layui-form-label {
+    width: 160px;
+}
+
+.layui-form .layui-input-block {
+    margin-left: 190px;
+}
+
+.layui-form-select dl {
+    top: @input-height+3px;
+}
+
+.layui-form-select dl dt, .layui-form-select dl dd {
+    line-height: @input-height;
+}
+//.layui-table-view .layui-table th, .layui-table-view .layui-table td{ padding:2px 0;}
+//.layui-table-cell{ font-size:13px;}
+.layui-btn-block {
+    display: block;
+    width: 100%;
+}
+
+body .layui-laydate .layui-this {
+    background-color: @baseColor !important;
+}
+
+.layui-nav {
+    .layui-nav-bar {
+        display: none !important;
+    }
+
+    .layui-nav-child {
+        top: 60px;
+    }
+
+    .iconfont {
+        color: #FFF;
+    }
+
+    .layui-nav-icon {
+        .iconfont {
+            font-size: 20px;
+        }
+
+        a {
+            padding: 0 10px;
+        }
+
+        .layui-nav-more {
+            display: none;
+        }
+    }
+}
+
+
+.layui-btn-primary {
+    background-color: #fff !important;
+    color: #555 !important;
+}
+.layui-field-footer {
+    background: #f6f6f6;
+    clear: both;
+    margin: 0 -15px -10px -15px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    border-top: 1px solid #e2e2e2;
+}
+
+.layui-elem-field legend {
+    font-size: 18px;
+}
+
+
+
+.layui-upload-img {
+    width: 92px;
+    height: 92px;
+    margin: 0 10px 10px 0;
+}
+
+.layui-form-danger, .layui-form-danger:hover {
+    border: 1px solid red !important;
+}
+
+.layui-layout-admin .layui-logo {
+    color: @baseColor;
+}
+
+.layui-elem-quote {
+    border-left: 5px solid @baseColor;
+}
+
+.layui-bg-green {
+    background-color: @baseColor !important
+}
+
+.layui-btn {
+    background-color: @baseColor;
+}
+
+.layui-btn-primary:hover {
+    border-color: @baseColor;
+}
+
+.layui-btn-group .layui-btn-primary:hover {
+    color: @baseColor
+}
+
+.layui-laypage a:hover {
+    color: @baseColor
+}
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: @baseColor
+}
+
+.layui-laypage input:focus, .layui-laypage select:focus {
+    border-color: @baseColor !important
+}
+
+.layui-upload-drag[lay-over] {
+    border-color: @baseColor
+}
+
+.layui-nav-tree .layui-nav-bar {
+    background-color: @baseColor
+}
+
+.layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-this > a:hover {
+    background-color: @baseColor;
+}
+
+.layui-tab-brief > .layui-tab-title .layui-this {
+    color: @baseColor
+}
+
+.layui-progress-bar {
+    background-color: @baseColorLight;
+}
+
+.layui-form-select dl dd.layui-this {
+    background-color: @baseColorLight;
+}
+
+.layui-form-checked, .layui-form-checked:hover {
+    border-color: @baseColorLight
+}
+
+.layui-form-checked span, .layui-form-checked:hover span {
+    //background-color: @baseColorLight
+}
+
+.layui-form-checked i, .layui-form-checked:hover i {
+    color: @baseColorLight
+}
+
+.layui-form-checkbox[lay-skin=primary]:hover i {
+    border-color: @baseColorLight;
+}
+
+.layui-form-checked[lay-skin=primary] i {
+    border-color: @baseColorLight;
+    background-color: @baseColorLight;
+}
+
+.layui-form-onswitch {
+    border-color: @baseColorLight;
+    background-color: @baseColorLight
+}
+
+.layui-form-radio i:hover, .layui-form-radioed i {
+    color: @baseColorLight
+}
+
+.layui-table-edit:focus {
+    border-color: @baseColorLight !important
+}
+
+.layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after {
+    background-color: @baseColorLight;
+}
+
+.layui-nav .layui-nav-child dd.layui-this a, .layui-nav-child dd.layui-this {
+    background-color: @baseColorLight;
+}
+
+.layui-breadcrumb a:hover {
+    color: @baseColorLight !important
+}
+
+.layui-tab-brief > .layui-tab-more li.layui-this:after, .layui-tab-brief > .layui-tab-title .layui-this:after {
+    border-bottom: 2px solid @baseColorLight
+}
+
+.layui-tab-card > .layui-tab-more .layui-this {
+    color: @baseColorLight
+}
+
+.layui-timeline-axis {
+    color: @baseColorLight;
+}
+.layui-form-selectup dl{bottom:auto;} 
+
+.layui-laydate-content td.laydate-selected{ color:@baseColorLight;}
+.laydate-selected:hover {
+    color: @baseColorLight;
+}
+.layui-btn-disabled, .layui-btn-disabled:active, .layui-btn-disabled:hover {
+    border: 1px solid #e6e6e6;
+    background-color: #FBFBFB;
+    color: #C9C9C9;
+    cursor: not-allowed;
+    opacity: 1;
+}
+.layui-form-checked span, .layui-form-checked:hover span{ background: @baseColor;}

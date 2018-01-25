@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="static/scripts/layui/css/layui.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_453552_w5leqboafy74x6r.css">
+    <title>首页</title>
+</head>
+<body style="overflow: hidden;">
+
+<div class="admin-container">
+    <div class="admin-header">
+        <ul class="layui-nav" style="text-align: right;">
+            <li class="layui-nav-item">
+                <a href="">控制台<span class="layui-badge">9</span></a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="">个人中心<span class="layui-badge-dot"></span></a>
+            </li>
+            <li class="layui-nav-item">
+                <a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">修改信息</a></dd>
+                    <dd><a href="javascript:;">安全管理</a></dd>
+                    <dd><a href="javascript:;">退了</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+    <div class="admin-menu">
+        <div class="admin-logo">
+            ......
+        </div>
+
+        <div class="layui-tab admin-menu-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this"><i class="iconfont icon-danpin"></i>界面</li>
+                <li><i class="iconfont icon-shuaxin"></i>权限</li>
+                <li><i class="iconfont icon-tongzhi"></i>商品</li>
+                <li><i class="iconfont icon-biaoxing"></i>订单</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <dl class="admin-sub-menu">
+                        <dt>windows</dt>
+                        <dd>
+                            <a href="#" open-type="tag" open-href="./windows.html" open-id="hengxiang" open-title="横向排列windows">横向排列</a>
+                            <a href="#" open-type="tag" open-href="./windows1.html" open-id="shuxiang" open-title="竖向排列windows">竖向排列</a>
+                            <a href="#" open-type="tag" open-href="./windows-group.html" open-id="fenzu" open-title="windows分组">分组</a>
+                        </dd>
+                    </dl>
+
+                    <dl class="admin-sub-menu">
+                        <dt>表单</dt>
+                        <dd>
+                            <a href="#" open-type="tag" open-href="./form.html" open-id="555" open-title="555">基础表单</a>
+                            <a href="#" open-type="tag" open-href="/index.html" open-id="666" open-title="666">等比例水平</a>
+                            <a href="#" open-type="tag" open-href="/index.html" open-id="777" open-title="777">等比例排列</a>
+                            <a href="#" open-type="tag" open-href="/index.html" open-id="888" open-title="888">等比水平排列</a>
+                        </dd>
+                    </dl>
+
+                    <dl class="admin-sub-menu">
+                        <dt>栅格</dt>
+                        <dd>
+                            <a href="#" open-type="tag" open-href="/index.html" open-id="999" open-title="999">等比例水平排列</a>
+                            <a href="#" open-type="tag" open-href="/index.html" open-id="1111" open-title="1111">等比例水平</a>
+                            <a href="#">等比例排列</a>
+                            <a href="#">等比水平排列</a>
+                        </dd>
+                    </dl>
+
+                    <dl class="admin-sub-menu">
+                        <dt>栅格</dt>
+                        <dd>
+                            <a href="#">等比例水平排列</a>
+                            <a href="#">等比例水平</a>
+                            <a href="#">等比例排列</a>
+                            <a href="#">等比水平排列</a>
+                        </dd>
+                    </dl>
+
+
+                </div>
+                <div class="layui-tab-item">内容2</div>
+                <div class="layui-tab-item">内容3</div>
+                <div class="layui-tab-item">内容4</div>
+                <div class="layui-tab-item">内容5</div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="admin-body">
+        <div class="admin-tag">
+            <div class="layui-tab" lay-allowClose="true" lay-filter="adminTag">
+                <ul class="layui-tab-title">
+                    <li class="layui-this" lay-id="welcome">欢迎界面</li>
+                    <!--<li  lay-id="22">用户基本管理</li>-->
+                    <!--<li  lay-id="33">权限分配</li>-->
+                    <!--<li  lay-id="44">全部历史商品管理文字长一点试试</li>-->
+                    <!--<li  lay-id="55">订单管理</li>-->
+                </ul>
+
+                <div class="admin-content layui-tab-content">
+                    <div class="layui-tab-item layui-show"><iframe src="./windows.html" frameborder="0" class="admin-iframe-page"></iframe></div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<script src="static/scripts/jquery.min.js"></script>
+<script src="static/scripts/layui/layui.all.js"></script>
+<script src="static/scripts/base.js"></script>
+<script>
+
+
+    function IframeTag(){
+    }
+    IframeTag.prototype.bindDom = function(){
+        var that = this;
+        that.$TAG_LINK.on("click",function(){
+            that.open($(this));
+            return false;
+        });
+
+        layui.element.on('tabDelete('+that.TAG+')', function(data){
+            var _id  = $(this).parent().attr("lay-id");
+            var index = that.tagList.indexOf(_id);
+            if(index != -1){
+                that.tagList.splice(index,1);
+            }
+//            console.log(this); //当前Tab标题所在的原始DOM元素
+//            console.log(data.index); //得到当前Tab的所在下标
+//            console.log(data.elem); //得到当前的Tab大容器
+        });
+        layui.element.on('tab('+that.TAG+')', function(data){
+
+            var _id = data.elem.find(".layui-this").attr("lay-id");
+            location.hash = 'adminTag='+ _id;
+            var tagWidth = 100/data.elem.find("li").length;
+            tagWidth = tagWidth>12.5?12.5:tagWidth;
+            data.elem.find("li").css("width",tagWidth+"%");
+        });
+
+
+    };
+    IframeTag.prototype.open = function(tag){
+        var that = this;
+        var _id  = tag;
+
+        //直接通过ID切换
+        if(typeof tag != "string"){
+            var _href = tag.attr("open-href") || tag.attr("href");
+            //如果没有连接 不打开
+            if(!_href){return false;}
+            _id  = tag.attr("open-id") || tag.attr("id");
+            var _title = tag.attr("open-title") || tag.attr("id") || tag.text();
+
+            //检测重复选项卡
+            if(this.tagList.indexOf(_id) == -1){
+                //加入tab
+                layui.element.tabAdd(that.TAG, {
+                    title: _title,
+                    content: '<iframe src="'+_href+'" frameborder="0" class="admin-iframe-page"></iframe>', //支持传入html
+                     id: _id
+                });
+                this.tagList.push(_id);
+            }
+        }
+        //切换到tab
+        layui.element.tabChange(that.TAG,_id);
+
+    };
+    IframeTag.prototype.close = function(){};
+    IframeTag.prototype.closeAll = function(){};
+    IframeTag.prototype.render = function(){
+
+    };
+    IframeTag.prototype.init = function(){
+        this.tagList = [];//所有tag
+        this.current = "";//当前打开的
+        this.$TAG_LINK =  $('[open-type=tag]'); //触发tag的DOM
+        this.TAG = 'adminTag'; //tag得选择器 lay-filter对应得值
+        //Hash地址的定位
+        var layid = location.hash.replace(/^#adminTag=/, '');
+        this.open(layid);
+        this.bindDom();
+    };
+
+
+    var aa = new IframeTag();
+    aa.init();
+
+
+
+</script>
+</body>
+</html>

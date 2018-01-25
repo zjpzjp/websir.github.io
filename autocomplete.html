@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="static/scripts/layui/css/layui.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_453552_w5leqboafy74x6r.css">
+</head>
+<body>
+<div class="admin-sub-heading">
+    表单
+</div>
+<form class="layui-form" action="">
+    <div class="layui-form-item">
+        <label class="layui-form-label">输入框</label>
+        <div class="layui-input-block">
+            <input type="text" name="title"  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码框</label>
+        <div class="layui-input-inline">
+            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">辅助文字</div>
+    </div>
+
+</form>
+<script src="static/scripts/jquery.min.js"></script>
+<script src="static/scripts/layui/layui.all.js"></script>
+<script src="static/scripts/base.js"></script>
+<script>
+
+    layui.use(['autocomplete'],function(autocomplete){
+       autocomplete.init({
+            elem:"input[type=text]",
+            textLength:3,//触发长度
+            delay:200,//触发延迟
+            callback:{
+                data:function(val,render){
+                    var data = [
+                        {title:"1231",value:"1231"+Math.random()},
+                        {title:"1232",value:"1232"},
+                        {title:"1233",value:"1233"},
+                        {title:"1234",value:"1234"}
+                    ];
+                    render(data);
+                },
+                selected:function(data){
+                    //alert(JSON.stringify(data));
+                },
+                close:function(){
+
+                }
+            }
+        });
+        autocomplete.init({
+            elem:"input[type=password]",
+            textLength:3,//触发长度
+            delay:300,//触发延迟
+            callback:{
+                data:function(val,render){
+                    var data = [
+                        {title:"1231",value:"1231"},
+                        {title:"1232",value:"1232"},
+                        {title:"1233",value:"1233"},
+                        {title:"1234",value:"1234"}
+                    ];
+                    render(data);
+                },
+                selected:function(data){
+                    console.log(data);
+                },
+                close:function(){
+
+                }
+            }
+        });
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="static/scripts/layui/css/layui.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_453552_w5leqboafy74x6r.css">
+</head>
+<body>
+
+
+
+
+<div class="admin-windows">
+    <div class="admin-windows-toolbar">
+        <a href="#" class="admin-windows-toolbar-item">工具2</a>
+        <a href="#" class="admin-windows-toolbar-item">工具1</a>
+    </div>
+    <div class="admin-windows-list">
+
+            <a href="#" class="admin-windows-item">
+                <i class="admin-windows-icon layui-icon">&#xe62d;</i>
+                <p class="admin-window-name">快速连接快速连接</p>
+            </a>
+
+            <a href="#" class="admin-windows-item">
+                <i class="admin-windows-icon"><img src="static/images/144.png" /> </i>
+                <p class="admin-window-name">快速连接</p>
+            </a>
+
+            <a href="#" class="admin-windows-item">
+                <i class="admin-windows-icon"><img src="static/images/1.png" /></i>
+                <p class="admin-window-name">快速连接</p>
+            </a>
+
+            <a href="#" class="admin-windows-item">
+                <i class="admin-windows-icon"><img src="static/images/2.png" /></i>
+                <p class="admin-window-name">快速连接</p>
+            </a>
+
+            <a href="#" class="admin-windows-item">
+                <i class="admin-windows-icon"><img src="static/images/3.png" /></i>
+                <p class="admin-window-name">快速连接</p>
+            </a>
+
+            <a href="#" class="admin-windows-item">
+                <i class="admin-windows-icon"><img src="static/images/4.png" /></i>
+                <p class="admin-window-name">快速连接</p>
+            </a>
+
+            <a href="#" class="admin-windows-item">
+                <i class="admin-windows-icon"><img src="static/images/5.png" /></i>
+                <p class="admin-window-name">快速连接</p>
+            </a>
+
+            <a href="#" class="admin-windows-item">
+                <i class="admin-windows-icon"><img src="static/images/6.png" /></i>
+                <p class="admin-window-name">快速连接</p>
+            </a>
+
+            <a href="#" class="admin-windows-item">
+                <i class="admin-windows-icon"><img src="static/images/7.png" /></i>
+                <p class="admin-window-name">快速连接</p>
+            </a>
+
+            <a href="#" class="admin-windows-item">
+                <i class="admin-windows-icon"><img src="static/images/8.png" /></i>
+                <p class="admin-window-name">快速连接</p>
+            </a>
+    </div>
+
+
+
+</div>
+
+<script src="static/scripts/jquery.min.js"></script>
+<script src="static/scripts/layui/layui.all.js"></script>
+<script src="static/scripts/base.js"></script>
+<script>
+
+
+    var WindowView = function(config){
+        this.size =  config.size || {width:100,height:100};//图标尺寸
+        this.toolbar=  config.toolbar || {top:0,left:0,bottom:0,right:0}; //工具栏大小，如果没有填0
+        this.model=  config.model || "2"; // 1横向排列  2竖向排列
+        this.$box=  config.$box || $(".admin-windows-list");
+    };
+
+    WindowView.prototype.render = function(){
+        var that = this;
+        that.$box.css({
+            left:that.toolbar.left,
+            right:that.toolbar.right,
+            top:that.toolbar.top,
+            bottom:that.toolbar.bottom
+        });
+        var _width = that.size.width,
+            _height = that.size.height,
+            _x,
+            _y;
+
+        that.$box.find(".admin-windows-item").each(function(index,el){
+            if(that.model == 1){
+                _length = parseInt(that.$box.width() / _width);
+                _x = index%_length*_width;
+                _y = parseInt(index/_length)*_width;
+            }else{
+                _length = parseInt(that.$box.height() / _height);
+                _x = parseInt(index/_length)*_height;
+                _y = index%_length*_height;
+            }
+            $(el).css({left:_x,top:_y,width:_width,height:_height});
+            $(el).find(".admin-windows-icon").css({width:_width *.55,height:_height *.55});
+        })
+    };
+
+
+    var windowView = {
+        size:{width:100,height:100},//图标尺寸
+        toolbar:{top:0,left:0,bottom:60,right:0}, //工具栏大小，如果没有填0
+        model:"2", // 1横向排列  2竖向排列
+        $box:$(".admin-windows-list").eq(0)
+    };
+
+    var view = new WindowView(windowView);
+    view.render();
+
+    $(window).on("resize",function(){
+        view.render();
+    });
+
+
+
+
+
+
+</script>
+</body>
+</html>
